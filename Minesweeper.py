@@ -35,7 +35,7 @@ def menu(win):
     start_button = Button(Rectangle(Point(40, 35), Point(60, 45)), "Start")
     start_button.draw_button(win)
 
-    help3 = Text(Point(50, 27.5), "Press Enter to return to this menu once in the game.\nPress s to toggle between placing flags and clicking cells.")
+    help3 = Text(Point(50, 27.5), "Press Return to return to this menu once in the game.\nPress s to toggle between placing flags and clicking cells.")
     help3.setSize(10)
     help3.draw(win)
 
