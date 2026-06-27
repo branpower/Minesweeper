@@ -282,7 +282,7 @@ def playMinesweeper(length, height, mines):
             elif 0 <= p.getX() <= length*a and 0 <= p.getY() <= height*a and not (won or lost):
                 i, j = findCellAddress(p, length, height, a)
                 cell_clicked = cells[i][j]
-                if mode_select.getMode() == "flag":
+                if not cell_clicked.isRevealed() and mode_select.getMode() == "flag":
                     if cell_clicked.getFlaggedStatus():
                         mine_counter.changeVal(1)
                     else:
