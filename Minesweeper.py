@@ -183,7 +183,7 @@ def zeroSpread(clickedCell_row, clickedCell_column, cell_matrix):
     
     for k in range(ystart, yend):
         for l in range(xstart, xend):
-            if not (k == 0 and l == 0) and not cell_matrix[clickedCell_row+k][clickedCell_column+l].isRevealed():
+            if not (k == 0 and l == 0) and not cell_matrix[clickedCell_row+k][clickedCell_column+l].isRevealed() and not cell_matrix[clickedCell_row+k][clickedCell_column+l].getFlaggedStatus():
                 cell_matrix[clickedCell_row+k][clickedCell_column+l].reveal()
                 total_cells_revealed += 1
                 if cell_matrix[clickedCell_row+k][clickedCell_column+l].getStatus() == 0:
