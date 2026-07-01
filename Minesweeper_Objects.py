@@ -95,7 +95,7 @@ class Cell:
                 draw_flag(self.win, self.x, self.y, self.a)
             else:
                 draw_empty(self.win, self.x, self.y, self.a)
-            
+        
             self.flagged = not self.flagged
     
     def incrementStatus(self):
